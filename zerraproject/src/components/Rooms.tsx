@@ -177,7 +177,7 @@ const Rooms: React.FC = () => {
                       <span className="text-2xl font-bold text-gray-900">{room.price}</span>
                       <span className="text-gray-600">/{room.period}</span>
                     </div>
-                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
                       Book Now
                     </button>
                   </div>
@@ -218,7 +218,7 @@ const Rooms: React.FC = () => {
                     <span>6 guests</span>
                   </div>
                 </div>
-                <button className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                <button className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors font-medium">
                   View Details
                 </button>
               </div>
@@ -280,7 +280,7 @@ const Rooms: React.FC = () => {
                       <span className="text-2xl font-bold text-gray-900">{room.price}</span>
                       <span className="text-gray-600">/{room.period}</span>
                     </div>
-                    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
                       Book Now
                     </button>
                   </div>

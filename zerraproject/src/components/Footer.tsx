@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                   placeholder="Email Address"
                   className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
                 />
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-r-lg hover:bg-blue-700 transition-colors">
+                <button className="bg-black text-white px-6 py-2 rounded-r-lg hover:bg-gray-900 transition-colors">
                   Subscribe
                 </button>
               </div>

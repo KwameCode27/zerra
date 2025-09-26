@@ -38,7 +38,7 @@ const Blog: React.FC = () => {
               Blog
             </h2>
           </div>
-          <button className="hidden md:flex items-center text-blue-600 hover:text-blue-700 font-medium">
+          <button className="hidden md:flex items-center text-black hover:text-gray-900 font-medium">
             View more
             <ArrowRight className="h-4 w-4 ml-1" />
           </button>

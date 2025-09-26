@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Sign In</button>
+            <button className="text-black hover:text-gray-900 font-medium transition-colors">Sign In</button>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Get Started
             </button>

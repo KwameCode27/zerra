@@ -31,7 +31,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           alt={title}
           className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        <button className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors">
+  <button className="absolute top-4 right-4 p-2 bg-black rounded-full shadow-md hover:bg-gray-900 transition-colors text-white">
           <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition-colors" />
         </button>
         {featured && (
@@ -68,7 +68,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
         
-        <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+  <button className="w-full mt-4 bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition-colors font-medium">
           View Details
         </button>
       </div>

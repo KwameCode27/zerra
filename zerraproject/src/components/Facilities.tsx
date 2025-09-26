@@ -38,7 +38,7 @@ const Facilities: React.FC = () => {
               Enjoy complete and best quality facilities
             </h2>
           </div>
-          <button className="hidden md:flex items-center text-blue-600 hover:text-blue-700 font-medium">
+          <button className="hidden md:flex items-center text-black hover:text-gray-900 font-medium">
             See more
           </button>
         </div>

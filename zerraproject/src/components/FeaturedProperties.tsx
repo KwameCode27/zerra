@@ -86,7 +86,7 @@ const FeaturedProperties: React.FC = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-medium">
+          <button className="bg-black border-2 border-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 hover:text-white transition-colors font-medium">
             More Info
           </button>
         </div>
