@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import { SignInForm, SignUpForm } from './AuthForms';
+
+// import { auth } from '../firebase';
+// import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { Menu, X, Home } from 'lucide-react';
+
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
@@ -25,8 +32,16 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-black hover:text-gray-900 font-medium transition-colors">Sign In</button>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            <button
+              className="text-black hover:text-gray-900 font-medium transition-colors"
+              onClick={() => setShowSignIn(true)}
+            >
+              Sign In
+            </button>
+            <button
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              onClick={() => setShowSignUp(true)}
+            >
               Get Started
             </button>
           </div>
@@ -50,10 +65,41 @@ const Header: React.FC = () => {
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Blog</a>
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
               <div className="flex flex-col space-y-2 pt-3">
-                <button className="text-gray-700 font-medium text-left">Sign In</button>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">
+                <button
+                  className="text-gray-700 font-medium text-left"
+                  onClick={() => setShowSignIn(true)}
+                >
+                  Sign In
+                </button>
+                <button
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium"
+                  onClick={() => setShowSignUp(true)}
+                >
                   Get Started
                 </button>
+      {/* Sign In Modal */}
+      {showSignIn && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-sm p-8 relative">
+            <button onClick={() => setShowSignIn(false)} className="absolute top-2 right-2 text-black text-2xl font-bold">&times;</button>
+            <h2 className="text-2xl font-bold mb-4 text-center">Sign In</h2>
+            <SignInForm onSuccess={() => setShowSignIn(false)} />
+            <p className="mt-4 text-center text-sm">Don't have an account? <button className="text-blue-600 underline" onClick={() => { setShowSignIn(false); setShowSignUp(true); }}>Get Started</button></p>
+          </div>
+        </div>
+      )}
+
+      {/* Sign Up Modal */}
+      {showSignUp && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-sm p-8 relative">
+            <button onClick={() => setShowSignUp(false)} className="absolute top-2 right-2 text-black text-2xl font-bold">&times;</button>
+            <h2 className="text-2xl font-bold mb-4 text-center">Get Started</h2>
+            <SignUpForm onSuccess={() => setShowSignUp(false)} />
+            <p className="mt-4 text-center text-sm">Already have an account? <button className="text-blue-600 underline" onClick={() => { setShowSignUp(false); setShowSignIn(true); }}>Sign In</button></p>
+          </div>
+        </div>
+      )}
               </div>
             </div>
           </div>

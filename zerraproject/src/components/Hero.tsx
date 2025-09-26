@@ -3,19 +3,26 @@ import { Search, MapPin, Home, DollarSign } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="relative py-20 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1500&q=80')"
+      }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Helping You Find The Most
-            <span className="text-blue-600 block">Comfortable Place</span>
+            <span className="text-blue-400 block">Comfortable Place</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-white max-w-3xl mx-auto mb-8">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
           </p>
         </div>
         
-        <div className="bg-white rounded-2xl shadow-xl p-6 max-w-4xl mx-auto">
+  <div className="bg-white bg-opacity-90 rounded-2xl shadow-xl p-6 max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="relative">
               <Home className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
