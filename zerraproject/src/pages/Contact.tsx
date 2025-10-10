@@ -4,6 +4,7 @@ const Contact: React.FC = () => (
   <section className="min-h-screen bg-gray-50 py-16">
     <div className="max-w-3xl mx-auto px-4">
       <div className="text-center mb-10">
+        <img src="https://images.unsplash.com/photo-1520923642038-b4259acecbd7?q=80&w=819&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Hero" className="w-full h-48 object-cover brightness-75 rounded" />
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Contact Us</h1>
         <p className="text-gray-600">We'd love to hear from you! Fill out the form below or reach us directly.</p>
       </div>

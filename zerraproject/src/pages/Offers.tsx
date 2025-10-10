@@ -9,28 +9,28 @@ type Offer = {
 
 const OFFERS: Offer[] = [
   {
-    id: "afternoon-tea",
-    title: "Afternoon Tea",
-    description: "Enjoy the afternoon with relaxing and enjoying our variety of pastries served fresh from 2pm to 5pm.",
-    image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c",
+    id: "Breakfast",
+    title: "Breakfast",
+    description: "Enjoy the Breakfast with relaxing and enjoying our variety of pastries served fresh from 2pm to 5pm.",
+    image: "https://plus.unsplash.com/premium_photo-1733259677103-fbb5d70ef830?q=80&w=970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DQ",
   },
   {
-    id: "birthday",
-    title: "Birthday",
+    id: "birthday cake ",
+    title: "Birthday cake ",
     description: "Celebrate your birthday with a bespoke cake and decorations. Add extra services at checkout.",
-    image: "https://images.unsplash.com/photo-1505250469679-203ad9ced0cb",
+    image: "https://images.unsplash.com/photo-1709195902163-7eee13e78970?q=80&w=746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    id: "floating-breakfast",
-    title: "Floating Breakfast",
-    description: "A private floating breakfast served in-room or poolside — romantic and memorable.",
-    image: "https://images.unsplash.com/photo-1541542684-6e9d2f3a9f25",
+    id: "floating-lunch",
+    title: "Floating lunch",
+    description: "A private floating lunch served in-room or poolside — romantic and memorable. Order now ",
+    image: "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGFuZCUyMGRyaW5rfGVufDB8fDB8fHww",
   },
   {
-    id: "honeymoon",
-    title: "Honeymoon",
-    description: "Make your special day with our honeymoon package including spa and private dinner.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+    id: "Evening Meal",
+    title: "Evening Meal",
+    description: "Make your evening special with some hot evening meal.",
+    image: "https://plus.unsplash.com/premium_photo-1672242676671-c71243a7c6d0?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

@@ -13,6 +13,9 @@ import RoomBookings from './pages/RoomBookings';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import RoomDetails from './pages/RoomDetails';
+import BlogPage from './pages/BlogPage';
+import FacilitiesPage from './pages/Facilities';
+import Weddings from './pages/weddings';
 
 function Home() {
   return (
@@ -36,6 +39,9 @@ function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/rooms" element={<RoomBookings />} />
   <Route path="/rooms/premium-deluxe" element={<RoomDetails />} />
+  <Route path="/facilities" element={<FacilitiesPage />} />
+  <Route path="/wedding" element={<Weddings />} />
+  <Route path="/blog" element={<BlogPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
