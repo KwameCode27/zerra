@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Bed, Bath, Square, Heart } from 'lucide-react';
 
 interface PropertyCardProps {
@@ -68,9 +69,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
         
-  <button className="w-full mt-4 bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+  <Link to="/rooms/premium-deluxe" className="w-full mt-4 inline-block text-center bg-black text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition-colors font-medium">
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   );

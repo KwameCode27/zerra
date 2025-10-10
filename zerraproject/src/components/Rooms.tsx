@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import BookingRoom from '../pages/RoomBookings';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Wifi, Car, Coffee, Dumbbell, Users, Bed, Bath, Square, Star } from 'lucide-react';
 
 const Rooms: React.FC = () => {
@@ -94,27 +94,11 @@ const Rooms: React.FC = () => {
     { icon: <Dumbbell className="h-6 w-6" />, name: "Fitness Center" }
   ];
 
-  const [showBooking, setShowBooking] = useState(false);
-  // const [selectedRoom, setSelectedRoom] = useState(null); // Not used, so commented out
-
-  const handleBookNow = () => {
-    setShowBooking(true);
-  };
-
-  const handleCloseBooking = () => {
-    setShowBooking(false);
-  };
+  // navigation uses Links to room details now; booking modal removed
 
   return (
     <div className="min-h-screen bg-white">
-      {showBooking && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg w-full max-w-3xl relative">
-            <button onClick={handleCloseBooking} className="absolute top-2 right-2 text-black text-2xl font-bold">&times;</button>
-            <BookingRoom />
-          </div>
-        </div>
-      )}
+      {/* booking modal removed; navigation now uses Links */}
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-gray-900 to-gray-700">
         <div 
@@ -197,12 +181,9 @@ const Rooms: React.FC = () => {
                       <span className="text-2xl font-bold text-gray-900">{room.price}</span>
                       <span className="text-gray-600">/{room.period}</span>
                     </div>
-                    <button
-                      className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium"
-                      onClick={handleBookNow}
-                    >
+                    <Link to="/rooms/premium-deluxe" className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block text-center">
                       Book Now
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -241,9 +222,9 @@ const Rooms: React.FC = () => {
                     <span>6 guests</span>
                   </div>
                 </div>
-                <button className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+                <Link to="/rooms/premium-deluxe" className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block">
                   View Details
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -303,9 +284,9 @@ const Rooms: React.FC = () => {
                       <span className="text-2xl font-bold text-gray-900">{room.price}</span>
                       <span className="text-gray-600">/{room.period}</span>
                     </div>
-                    <button className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium">
+                    <Link to="/rooms/premium-deluxe" className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block text-center">
                       Book Now
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

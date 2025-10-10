@@ -4,6 +4,7 @@ import { SignInForm, SignUpForm } from './AuthForms';
 // import { auth } from '../firebase';
 // import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { Menu, X, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 
 const Header: React.FC = () => {
@@ -21,14 +22,14 @@ const Header: React.FC = () => {
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Rooms</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Facilities</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Offers</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Wedding</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Blog</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+            <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</Link>
+            <Link to="/rooms" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Rooms</Link>
+            <Link to="#facilities" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Facilities</Link>
+            <Link to="/offers" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Offers</Link>
+            <Link to="#wedding" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Wedding</Link>
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</Link>
+            <Link to="#blog" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Blog</Link>
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</Link>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -56,14 +57,14 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-3">
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Rooms</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Facilities</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Offers</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Wedding</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">About</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Blog</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+              <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
+              <Link to="/rooms" className="text-gray-700 hover:text-blue-600 font-medium">Rooms</Link>
+              <Link to="#facilities" className="text-gray-700 hover:text-blue-600 font-medium">Facilities</Link>
+              <Link to="/offers" className="text-gray-700 hover:text-blue-600 font-medium">Offers</Link>
+              <Link to="#wedding" className="text-gray-700 hover:text-blue-600 font-medium">Wedding</Link>
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
+              <Link to="#blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
+              <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
               <div className="flex flex-col space-y-2 pt-3">
                 <button
                   className="text-gray-700 font-medium text-left"
