@@ -7,7 +7,7 @@ const RoomDetails: React.FC = () => {
         {/* Hero */}
         <div className="relative rounded-lg overflow-hidden mb-8">
           <img
-            src="https://media.istockphoto.com/id/1353806087/photo/stylish-living-room-interior-with-design-grey-sofa-coffe-table-pouf-basket-shelf-mirror.jpg?s=612x612&w=0&k=20&c=11mrVsr7GczF78vPH5d2m18tIme_RuP7WaPeAHCiJRA="
+            src="https://plus.unsplash.com/premium_photo-1683122055976-ef2ec6da6af0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cm9vbSUyMGRldGFpbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
             alt="Premium Deluxe"
             className="w-full h-64 object-cover brightness-75"
           />
