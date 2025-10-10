@@ -181,7 +181,11 @@ const Rooms: React.FC = () => {
                       <span className="text-2xl font-bold text-gray-900">{room.price}</span>
                       <span className="text-gray-600">/{room.period}</span>
                     </div>
-                    <Link to="/rooms/premium-deluxe" className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block text-center">
+                    <Link
+                      to="/booking"
+                      state={{ room: room.name, price: room.price }}
+                      className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block text-center"
+                    >
                       Book Now
                     </Link>
                   </div>
@@ -284,7 +288,11 @@ const Rooms: React.FC = () => {
                       <span className="text-2xl font-bold text-gray-900">{room.price}</span>
                       <span className="text-gray-600">/{room.period}</span>
                     </div>
-                    <Link to="/rooms/premium-deluxe" className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block text-center">
+                    <Link
+                      to="/booking"
+                      state={{ room: room.name, price: room.price }}
+                      className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition-colors font-medium inline-block text-center"
+                    >
                       Book Now
                     </Link>
                   </div>

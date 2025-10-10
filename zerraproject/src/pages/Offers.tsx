@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 type Offer = {
   id: string;
@@ -35,6 +36,7 @@ const OFFERS: Offer[] = [
 ];
 
 const Offers: React.FC = () => {
+  const navigate = useNavigate();
   const [openOffer, setOpenOffer] = useState<Offer | null>(null);
   const [orderData, setOrderData] = useState({ name: "", email: "", notes: "" });
 
@@ -46,12 +48,11 @@ const Offers: React.FC = () => {
   const closeOrder = () => setOpenOffer(null);
 
   const submitOrder = () => {
-    // Placeholder: integrate with API/Firebase later
-    // For now just close modal and log
+    // Navigate to booking page with offer details for checkout
     // eslint-disable-next-line no-console
     console.log("Order submitted", { offer: openOffer?.id, ...orderData });
     closeOrder();
-    alert("Order submitted — we'll contact you via email.");
+    navigate('/booking', { state: { offer: openOffer?.title, ...orderData } });
   };
 
   return (

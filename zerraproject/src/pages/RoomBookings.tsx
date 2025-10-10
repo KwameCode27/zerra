@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useLocation } from 'react-router-dom';
 
 type Step = 1 | 2 | 3;
 
 const BookingRoom: React.FC = () => {
+  const location = useLocation();
+  const state: any = location.state || {};
   const [step, setStep] = useState<Step>(1);
 
   // Form state
@@ -42,14 +45,14 @@ const BookingRoom: React.FC = () => {
         {/* Room Info */}
         <div className="flex gap-6 border-b pb-4 mb-6">
           <img
-            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"
-            alt="Premium Deluxe"
+            src={state.image || "https://images.unsplash.com/photo-1505691938895-1758d7feb511"}
+            alt={state.room || "Premium Deluxe"}
             className="w-40 h-28 object-cover rounded"
           />
           <div>
-            <h2 className="text-xl font-semibold">Premium Deluxe</h2>
-            <p className="text-sm text-gray-500">60m² • 1 Bed • 1 Bathroom • Balcony</p>
-            <p className="text-red-500 font-bold mt-2">$1200 / night</p>
+            <h2 className="text-xl font-semibold">{state.room || "Premium Deluxe"}</h2>
+            <p className="text-sm text-gray-500">{state.details || "60m² • 1 Bed • 1 Bathroom • Balcony"}</p>
+            <p className="text-red-500 font-bold mt-2">{state.price || "$1200 / night"}</p>
           </div>
         </div>
 
